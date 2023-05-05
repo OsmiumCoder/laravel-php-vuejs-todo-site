@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
-use App\Notifications\TodoPastDue;
 use App\Repositories\TodoRepository;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -39,6 +38,7 @@ class TodoController extends Controller
         Todo::create([
             'title' => $request->title,
             'description' => $request->description,
+//            'category_id' => $request->category_id,
             'deadline' => $request->deadline,
             'user_id' => Auth::id()
         ]);

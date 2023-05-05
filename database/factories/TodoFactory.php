@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use App\Models\Todo;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -22,7 +23,7 @@ class TodoFactory extends Factory
             'title' => fake()->word,
             'description' => fake()->paragraph,
             'deadline' => fake()->date,
-            'user_id' => User::Factory()
+            'user_id' => User::factory()
         ];
     }
 }

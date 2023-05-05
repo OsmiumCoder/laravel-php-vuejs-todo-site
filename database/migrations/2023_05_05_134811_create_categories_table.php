@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('todos', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
-//            $table->foreignId('category_id');
-            $table->date('deadline');
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->string('category')->unique();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('todos');
+        // Schema::dropIfExists('categories');
     }
 };

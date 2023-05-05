@@ -4,7 +4,6 @@ import NewTodoForm from "@/Components/TodoForms/NewTodoForm.vue";
 import TodoLayout from "@/Components/TodoForms/TodoLayout.vue";
 import {Head} from '@inertiajs/vue3';
 
-// router.reload({only: ['todos']})
 defineProps({
     todos: {}
 });

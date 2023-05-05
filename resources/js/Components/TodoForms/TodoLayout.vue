@@ -30,7 +30,6 @@ export default {
     emits: ['deleted'],
     methods: {
         async deleteTodo(todo) {
-            console.log(todo);
             await axios.delete(`/dashboard/todos/${todo.id}/delete`);
             this.$emit('deleted', todo);
         }
